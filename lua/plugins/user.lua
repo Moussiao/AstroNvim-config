@@ -1,13 +1,13 @@
 -- == User settings ==
+vim.o.scrolloff = 7;
 
 -- == Lenght line for *.py files == 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
+  pattern = "python,javascript,vue,typescript,c",
   callback = function()
     vim.api.nvim_set_option_value("colorcolumn", "88", {})
   end
 })
-
 
 return {
   {
